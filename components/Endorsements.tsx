@@ -2,24 +2,24 @@
 
 const endorsements = [
   {
-    name: "Sen. Eleanor Marsh",
-    role: "U.S. Senator, California",
-    quote: "Marcus Vance is the leader this country needs. I've watched him forge unlikely coalitions for two decades. He delivers.",
+    name: "Karol Nawrocki",
+    role: "Prezydent Rzeczpospolitej Polski",
+    quote: "Bartosz to złoty człowiek, który zawsze bezinteresownie pomoże przy maszynach, dlatego ma mój głos.",
   },
   {
-    name: "Gov. James Whitfield",
-    role: "Governor of Texas",
-    quote: "We don't agree on everything — and that's exactly why I trust him. He listens. He compromises. He leads.",
+    name: "Donald Tusk",
+    role: "Premier polskiego rządu",
+    quote: "To niezwykle kulturalny i pomocny chłopak, który potrafi słuchać ludzi, więc będzie świetnym sołtysem.",
   },
   {
-    name: "Dr. Patricia Osei",
-    role: "President, National Education Association",
-    quote: "No candidate in a generation has shown a deeper commitment to our classrooms. Marcus Vance puts children first.",
+    name: "Binjamin Netanjahu",
+    role: "Premier Izraela",
+    quote: "Głosuję na Bartosza, bo to swój chłop z nowoczesnymi pomysłami, który naprawdę ruszy naszą wieś do przodu.",
   },
   {
-    name: "Brig. Gen. (Ret.) Frank DiNapoli",
-    role: "Former Joint Chiefs, U.S. Army",
-    quote: "Strong at home, respected abroad. The kind of commander-in-chief our troops and our allies can count on.",
+    name: "Jeffrey Epstein",
+    role: "Amerykański finansista",
+    quote: "Znam go od dziecka i wiem, że ma serce po właściwej stronie – to jedyny słuszny wybór dla naszej społeczności.",
   },
 ];
 
@@ -54,7 +54,7 @@ export default function Endorsements() {
               letterSpacing: "0.35em",
               color: "var(--accent)",
               textTransform: "uppercase",
-            }}>Who's With Us</span>
+            }}>Kto jest z nami</span>
           </div>
           <h2 style={{
             fontFamily: "'Cormorant Garamond', serif",
@@ -63,7 +63,7 @@ export default function Endorsements() {
             color: "var(--text-primary)",
             letterSpacing: "-0.02em",
             lineHeight: 1.1,
-          }}>Endorsed by leaders<br />across the spectrum.</h2>
+          }}>Wspierany przez przywódców<br />z całego świata.</h2>
         </div>
 
         <div style={{
@@ -73,7 +73,7 @@ export default function Endorsements() {
           color: "var(--text-muted)",
           textTransform: "uppercase",
         }}>
-          400+ elected officials · 85 labor unions · 200+ civic organizations
+          400+ dzieci przedszkolnych · 85 niezależnych organizacji · 200+ organów państwowych
         </div>
       </div>
 

@@ -3,23 +3,27 @@
 const pillars = [
   {
     num: "01",
-    title: "Economic Renewal",
-    desc: "Rebuilding the middle class through strategic investment in domestic manufacturing, fair trade policy, and tax reform that works for working families — not just the wealthy.",
+    title: "Turnieje",
+    desc: "Wprowadzę wiele turniejów z różnych dyscyplin takich jak Madżong.",
+    image: "mahjong.jpg"
   },
   {
     num: "02",
-    title: "Climate & Infrastructure",
-    desc: "A 10-year national infrastructure plan that modernizes America's roads, bridges, and energy grid while creating millions of good-paying, union jobs.",
+    title: "Renowacja szkoły",
+    desc: "Przeprowadzę remont zewnętrznego miejsca spotkań uczniów zwane również \"Palarnią\" przy pomocy technikum budowlanego.",
+    image: "palarnia.jpg"
   },
   {
     num: "03",
-    title: "Healthcare Sovereignty",
-    desc: "Ensuring every American has access to affordable, quality healthcare. Negotiating prescription drug prices and expanding coverage without dismantling what works.",
+    title: "Zajęcia dodatkowe",
+    desc: "Zorganizuję więcej zajęc pozalekcyjnych, na przykład zajęcia dodatkowe z chemii, gdzie uczniowie będą mogli nabyć umiejętności fermentacji oraz destylacji.",
+    image: "bimber.jpg"
   },
   {
     num: "04",
-    title: "Education & Opportunity",
-    desc: "From universal pre-K to affordable college and debt relief — investing in the next generation is the highest-return investment a nation can make.",
+    title: "Współpraca międzynarodowa",
+    desc: "Umocnię wsółpracę narodową z każdym krajem, będę wspierał finansowo kraje, które najbardziej tego potrzebują, głównie Izrael.",
+    image: "israel.jpg"
   },
 ];
 
@@ -62,7 +66,7 @@ export default function Vision() {
             letterSpacing: "0.35em",
             color: "var(--accent)",
             textTransform: "uppercase",
-          }}>Platforma i politika</span>
+          }}>Obietnice wyborcze</span>
         </div>
         <h2 style={{
           fontFamily: "'Cormorant Garamond', serif",
@@ -98,6 +102,20 @@ export default function Vision() {
             onMouseEnter={e => (e.currentTarget.style.background = "var(--surface)")}
             onMouseLeave={e => (e.currentTarget.style.background = "var(--bg)")}
           >
+
+            <img
+              src = {"images/" + p.image}
+              style={{
+                width: "100%",
+                height: "300px",
+                objectFit: "cover",
+                display: "block",
+                marginBottom: "32px",
+                background: "var(--border)",
+              }}
+            />
+
+
             <span style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: "80px",

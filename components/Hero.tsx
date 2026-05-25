@@ -49,6 +49,37 @@ export default function Hero() {
         }} />
       ))}
 
+      {/* Candidate image */}
+      <div
+        style={{
+          position: "absolute",
+          right: "0",
+          bottom: "0",
+          height: "75vh",
+          maxHeight: "820px",
+          width: "auto",
+          zIndex: 1,
+          opacity: 0,
+          animation: "fadeIn 1.2s ease 0.8s forwards",
+          pointerEvents: "none",
+            filter: "drop-shadow(0 20px 60px rgba(255, 255, 255, 0.45))",
+        }}
+      >
+        <img
+          src="images/bartosz.png"
+          alt="Bartosz Wojtkowiak"
+          style={{
+            height: "100%",
+            width: "auto",
+            objectFit: "contain",
+            maskImage:
+              "linear-gradient(to top, transparent 0%, black 12%, black 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to top, transparent 0%, black 12%, black 100%)",
+          }}
+        />
+      </div>
+
       {/* Year badge top right */}
       <div style={{
         position: "absolute",

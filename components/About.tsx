@@ -1,12 +1,12 @@
 "use client";
 
 const timeline = [
-  { year: "1972", event: "Born in Columbus, Ohio to a steelworker father and schoolteacher mother." },
-  { year: "1994", event: "Graduated top of his class, Yale Law School. Clerked for the Supreme Court." },
-  { year: "2001", event: "Founded the Ohio Justice Project, providing legal aid to over 12,000 families." },
-  { year: "2010", event: "Elected to U.S. Senate. Served 3 terms on the Foreign Relations Committee." },
-  { year: "2018", event: "Led landmark bipartisan infrastructure legislation. The Vance-Kim Infrastructure Act." },
-  { year: "2028", event: "Running for President of the United States." },
+  { year: "2001", event: "Atak na Światowe Centrum Handlu w Nowym Jorku." },
+  { year: "2009", event: "Urodzony we wsi Oborniki." },
+  { year: "2016", event: "Laureat konkursu plastycznego." },
+  { year: "2021", event: "Ukończył szkołę podstawową nr 6 w Jarocinie." },
+  { year: "2022", event: "Wsparł Izrael kwotą 890zł." },
+  { year: "2026", event: "Sołtys szkoły ZSP1 w Jarocinie." },
 ];
 
 export default function About() {
@@ -34,7 +34,7 @@ export default function About() {
             letterSpacing: "0.35em",
             color: "var(--accent)",
             textTransform: "uppercase",
-          }}>The Candidate</span>
+          }}>O kandydacie</span>
         </div>
 
         <h2 style={{
@@ -46,7 +46,7 @@ export default function About() {
           lineHeight: 1.1,
           marginBottom: "32px",
         }}>
-          Born from the heartland. Built for this moment.
+          Urodzony aby wspierać lokalnych rolników.
         </h2>
 
         <p style={{
@@ -57,7 +57,7 @@ export default function About() {
           color: "var(--text-secondary)",
           marginBottom: "24px",
         }}>
-          Marcus Vance grew up in Columbus, Ohio, in a household that understood both the promise and fragility of the American Dream. His father worked thirty years in a steel mill; his mother taught fourth grade for twenty-five. From them, he learned what government can and cannot do — and why it matters who's in charge.
+          Bartosz Wojtkowiak to 16-letni, pracowity rolnik z sąsiedztwa, który startuje na sołtysa, by wnieść do wsi realne działanie zamiast obietnic. Choć na co dzień twardo stąpa po ziemi i naprawia sąsiadom traktory, jego wielką pasją jest Bliski Wschód – jako dumny zwolennik Izraela podziwia ten kraj za patriotyzm i nowoczesne technologie rolnicze, które chciałby przenieść na lokalny grunt.
         </p>
 
         <p style={{
@@ -68,7 +68,7 @@ export default function About() {
           color: "var(--text-secondary)",
           marginBottom: "48px",
         }}>
-          Three terms in the Senate taught him that progress is earned through coalition, not confrontation. He's authored landmark legislation, built bridges across the aisle, and never forgotten the people who sent him there.
+          Bartek to prosty, szczery facet, który nie boi się głośno mówić, co myśli, a barwy Izraela traktuje jako symbol niezłomności i pracowitości.
         </p>
 
         {/* Quote */}
@@ -86,7 +86,7 @@ export default function About() {
             lineHeight: 1.6,
             marginBottom: "12px",
           }}>
-            "I've never met an American who didn't want a better life for their children. That's the common ground we build from."
+            "Nigdy nie spotkałem wsiura, który nie chciał lepszej przyszłości dla jego dzieci."
           </p>
           <cite style={{
             fontFamily: "'Barlow Condensed', sans-serif",
@@ -95,7 +95,7 @@ export default function About() {
             color: "var(--text-muted)",
             textTransform: "uppercase",
             fontStyle: "normal",
-          }}>— Marcus A. Vance</cite>
+          }}>— Bartosz Wojtkowiak</cite>
         </blockquote>
       </div>
 
@@ -110,8 +110,8 @@ export default function About() {
           {/* Vertical line */}
           <div style={{
             position: "absolute",
-            left: "52px",
-            top: "8px",
+            left: "42px",
+            top: "4px",
             bottom: "8px",
             width: "1px",
             background: "linear-gradient(180deg, var(--accent), rgba(200,169,110,0.1))",
@@ -122,7 +122,7 @@ export default function About() {
               display: "grid",
               gridTemplateColumns: "104px 1fr",
               gap: "24px",
-              paddingBottom: "36px",
+              paddingBottom: "30px",
               position: "relative",
             }}>
               {/* Year + dot */}

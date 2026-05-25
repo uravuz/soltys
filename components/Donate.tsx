@@ -31,7 +31,7 @@ export default function Donate() {
             letterSpacing: "0.35em",
             color: "var(--accent)",
             textTransform: "uppercase",
-          }}>Fund the Future</span>
+          }}>Sfinansuj przyszłość</span>
         </div>
 
         <h2 style={{
@@ -43,7 +43,7 @@ export default function Donate() {
           lineHeight: 1.1,
           marginBottom: "24px",
         }}>
-          Every dollar is a vote cast before Election Day.
+          Każda złotówka to głos oddany przed dniem wyborów.
         </h2>
 
         <p style={{
@@ -54,14 +54,14 @@ export default function Donate() {
           color: "var(--text-secondary)",
           marginBottom: "40px",
         }}>
-          92% of our donations come from individuals giving $100 or less. This campaign belongs to the people — and it's funded by them.
+          92% naszych darowizn pochodzi od osób prywatnych, które przekazują 100 złotych lub mniej. Ta kampania należy do ludzi i jest przez nich finansowana.
         </p>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
           {[
-            { label: "$25 keeps the lights on at a field office for a day." },
-            { label: "$100 trains a new volunteer coordinator." },
-            { label: "$500 funds a week of digital outreach in a swing state." },
+            { label: "100zł finansuje opłacenie oświetlenia w biurze terenowym przez jeden dzień." },
+            { label: "400zł finansuje przeszkolenie nowego koordynatora ds. wolontariatu." },
+            { label: "2000zł tygodniowo finansuje działania cyfrowe w niezdecydowanym stanie." },
           ].map((item, i) => (
             <div key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
               <div style={{
@@ -97,7 +97,7 @@ export default function Donate() {
           color: "var(--text-muted)",
           textTransform: "uppercase",
           marginBottom: "28px",
-        }}>Select an Amount</h3>
+        }}>Wybierz ilość</h3>
 
         <div style={{
           display: "grid",
@@ -133,12 +133,12 @@ export default function Donate() {
                 }
               }}
             >
-              ${amt}
+              {amt}zł
             </button>
           ))}
           <input
             type="number"
-            placeholder="Other"
+            placeholder="Inna kwota"
             value={custom}
             onChange={e => { setCustom(e.target.value); setSelected(0); }}
             style={{
@@ -171,7 +171,7 @@ export default function Donate() {
             fontSize: "12px",
             color: "var(--text-muted)",
             textAlign: "center",
-          }}>one-time contribution</div>
+          }}>jednorazowe wsparcie</div>
         </div>
 
         <button style={{
@@ -192,18 +192,9 @@ export default function Donate() {
         onMouseEnter={e => { e.currentTarget.style.background = "var(--accent-hover)"; }}
         onMouseLeave={e => { e.currentTarget.style.background = "var(--accent)"; }}
         >
-          Donate Now →
+          WSPOMÓŻ TERAZ →
         </button>
 
-        <p style={{
-          fontFamily: "'Barlow', sans-serif",
-          fontSize: "11px",
-          color: "var(--text-muted)",
-          textAlign: "center",
-          lineHeight: 1.6,
-        }}>
-          Paid for by Vance for President, Inc. Contributions are not tax deductible. Max $3,300/person. FEC rules apply.
-        </p>
       </div>
     </section>
   );

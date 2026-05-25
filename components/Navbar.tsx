@@ -11,7 +11,12 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const links = ["Obietnice", "Problemy", "O", "Rekomendacje", "Dołącz do nas"];
+  const links = [
+    { name: "Obietnice", link: "vision"},
+    { name: "O", link: "about"},
+    { name: "Rekomendacje", link: "endorsements"},
+    { name: "Dołącz do nas", link: "join-us"},
+  ];
 
   return (
     <nav
@@ -55,8 +60,8 @@ export default function Navbar() {
       <div style={{ display: "flex", alignItems: "center", gap: "40px" }}>
         {links.map((link) => (
           <a
-            key={link}
-            href={`#${link.toLowerCase().replace(" ", "-")}`}
+            key={link.link}
+            href={`#${link.link.toLowerCase().replace(" ", "-")}`}
             style={{
               fontFamily: "'Barlow Condensed', sans-serif",
               fontWeight: 500,
@@ -70,7 +75,7 @@ export default function Navbar() {
             onMouseEnter={e => (e.currentTarget.style.color = "var(--text-primary)")}
             onMouseLeave={e => (e.currentTarget.style.color = "var(--text-secondary)")}
           >
-            {link}
+            {link.name}
           </a>
         ))}
         <a

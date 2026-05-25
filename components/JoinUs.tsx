@@ -54,7 +54,7 @@ export default function JoinUs() {
             letterSpacing: "0.35em",
             color: "var(--accent)",
             textTransform: "uppercase",
-          }}>Get Involved</span>
+          }}>Zaangażuj się</span>
           <div style={{ width: "40px", height: "1px", background: "var(--accent)" }} />
         </div>
 
@@ -67,8 +67,8 @@ export default function JoinUs() {
           lineHeight: 1.05,
           marginBottom: "24px",
         }}>
-          History doesn't happen<br />
-          <em style={{ fontStyle: "italic" }}>without you.</em>
+          Historia nie dzieje się<br />
+          <em style={{ fontStyle: "italic" }}>bez ciebie.</em>
         </h2>
 
         <p style={{
@@ -81,7 +81,7 @@ export default function JoinUs() {
           maxWidth: "520px",
           margin: "0 auto 56px",
         }}>
-          Join millions of Americans building the campaign that will define this generation. Sign up to volunteer, donate, or simply stay informed.
+          Dołącz do milionów Polaków budujących kampanię, która zdefiniuje to pokolenie. Zarejestruj się jako wolontariusz, przekaż darowiznę lub po prostu bądź na bieżąco.
         </p>
 
         {submitted ? (
@@ -104,14 +104,14 @@ export default function JoinUs() {
               fontFamily: "'Barlow', sans-serif",
               fontSize: "15px",
               color: "var(--text-secondary)",
-            }}>We'll be in touch soon. Thank you for standing with us.</p>
+            }}>Wkrótce się z Tobą skontaktujemy. Dziękujemy za wsparcie.</p>
           </div>
         ) : (
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
               <input
                 type="email"
-                placeholder="Your email address"
+                placeholder="Twój adress e-mail"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 style={{
@@ -130,7 +130,7 @@ export default function JoinUs() {
               />
               <input
                 type="text"
-                placeholder="ZIP Code"
+                placeholder="Kod pocztowy"
                 value={zip}
                 onChange={e => setZip(e.target.value)}
                 style={{
@@ -173,7 +173,7 @@ export default function JoinUs() {
                 e.currentTarget.style.transform = "translateY(0)";
               }}
             >
-              Join the Movement
+              Dołącz do ruchu
             </button>
           </div>
         )}

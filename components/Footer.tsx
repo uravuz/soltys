@@ -1,9 +1,9 @@
 "use client";
 
 const footerLinks = {
-  Campaign: ["Vision", "Issues", "Events", "Press"],
-  Connect: ["Volunteer", "Donate", "Merch", "Voter Registration"],
-  Legal: ["Privacy Policy", "Terms of Use", "FEC Disclosures", "Accessibility"],
+  Kampania: ["Wizja", "Problemy", "Wydarzenia", "Prasa"],
+  "Nawiąż": ["Wspomóż", "Merch", "Zagłosuj"],
+  Prawne: ["Polityka prywatności", "Warunki korzystania", "Dostępność"],
 };
 
 export default function Footer() {
@@ -29,7 +29,7 @@ export default function Footer() {
             color: "var(--text-primary)",
             textTransform: "uppercase",
             marginBottom: "4px",
-          }}>Marcus Vance</div>
+          }}>Bartosz Wojtkowiak</div>
           <div style={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontSize: "11px",
@@ -37,7 +37,7 @@ export default function Footer() {
             color: "var(--accent)",
             textTransform: "uppercase",
             marginBottom: "24px",
-          }}>For President · 2028</div>
+          }}>Na sołtysa · 2026</div>
           <p style={{
             fontFamily: "'Barlow', sans-serif",
             fontWeight: 300,
@@ -46,7 +46,7 @@ export default function Footer() {
             color: "var(--text-muted)",
             maxWidth: "280px",
           }}>
-            Building a stronger, more united America — one community at a time.
+            Budujemy silniejszą i bardziej zjednoczoną wieś – społeczność po społeczności.
           </p>
 
           <div style={{ display: "flex", gap: "16px", marginTop: "32px" }}>
@@ -123,7 +123,7 @@ export default function Footer() {
           fontSize: "12px",
           color: "var(--text-muted)",
         }}>
-          © 2028 Vance for President, Inc. All rights reserved. Paid for by Vance for President.
+          © 2026 Bartosz wojtkowiak na sołtysa, Wszelkie prawa zastrzeżone. Opłacone przez "Bartosz wojtkowiak na sołtysa".
         </span>
         <span style={{
           fontFamily: "'Cormorant Garamond', serif",
@@ -132,7 +132,7 @@ export default function Footer() {
           color: "var(--text-muted)",
           letterSpacing: "0.02em",
         }}>
-          A New Direction for America.
+          Nowy kierunek dla Polskiej wsi.
         </span>
       </div>
     </footer>
