@@ -8,193 +8,102 @@ export default function Donate() {
   const [custom, setCustom] = useState("");
 
   return (
-    <section id="donate" style={{
-      padding: "120px 48px",
-      background: "var(--bg)",
-      display: "grid",
-      gridTemplateColumns: "1fr 1fr",
-      gap: "80px",
-      alignItems: "center",
-    }}>
-      {/* Left content */}
-      <div>
-        <div style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "16px",
-          marginBottom: "24px",
-        }}>
-          <div style={{ width: "40px", height: "1px", background: "var(--accent)" }} />
-          <span style={{
-            fontFamily: "'Barlow Condensed', sans-serif",
-            fontSize: "12px",
-            letterSpacing: "0.35em",
-            color: "var(--accent)",
-            textTransform: "uppercase",
-          }}>Sfinansuj przyszłość</span>
-        </div>
-
-        <h2 style={{
-          fontFamily: "'Cormorant Garamond', serif",
-          fontSize: "clamp(40px, 4vw, 58px)",
-          fontWeight: 300,
-          color: "var(--text-primary)",
-          letterSpacing: "-0.02em",
-          lineHeight: 1.1,
-          marginBottom: "24px",
-        }}>
-          Każda złotówka to głos oddany przed dniem wyborów.
-        </h2>
-
-        <p style={{
-          fontFamily: "'Barlow', sans-serif",
-          fontWeight: 300,
-          fontSize: "16px",
-          lineHeight: 1.85,
-          color: "var(--text-secondary)",
-          marginBottom: "40px",
-        }}>
-          92% naszych darowizn pochodzi od osób prywatnych, które przekazują 100 złotych lub mniej. Ta kampania należy do ludzi i jest przez nich finansowana.
-        </p>
-
-        <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-          {[
-            { label: "100zł finansuje opłacenie oświetlenia w biurze terenowym przez jeden dzień." },
-            { label: "400zł finansuje przeszkolenie nowego koordynatora ds. wolontariatu." },
-            { label: "2000zł tygodniowo finansuje działania cyfrowe w niezdecydowanym stanie." },
-          ].map((item, i) => (
-            <div key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
-              <div style={{
-                width: "6px",
-                height: "6px",
-                borderRadius: "50%",
-                background: "var(--accent)",
-                marginTop: "7px",
-                flexShrink: 0,
-              }} />
-              <span style={{
-                fontFamily: "'Barlow', sans-serif",
-                fontSize: "14px",
-                color: "var(--text-secondary)",
-                lineHeight: 1.6,
-              }}>{item.label}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Right: donation widget */}
-      <div style={{
-        background: "var(--surface)",
-        border: "1px solid var(--border-bright)",
-        padding: "48px",
-      }}>
-        <h3 style={{
-          fontFamily: "'Barlow Condensed', sans-serif",
-          fontWeight: 600,
-          fontSize: "14px",
-          letterSpacing: "0.2em",
-          color: "var(--text-muted)",
-          textTransform: "uppercase",
-          marginBottom: "28px",
-        }}>Wybierz ilość</h3>
-
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "8px",
-          marginBottom: "16px",
-        }}>
-          {amounts.map(amt => (
-            <button
-              key={amt}
-              onClick={() => { setSelected(amt); setCustom(""); }}
-              style={{
-                background: selected === amt ? "var(--accent)" : "transparent",
-                border: `1px solid ${selected === amt ? "var(--accent)" : "var(--border-bright)"}`,
-                padding: "14px",
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 600,
-                fontSize: "16px",
-                color: selected === amt ? "var(--bg)" : "var(--text-secondary)",
-                cursor: "pointer",
-                transition: "all 0.2s",
-              }}
-              onMouseEnter={e => {
-                if (selected !== amt) {
-                  e.currentTarget.style.borderColor = "rgba(255,255,255,0.3)";
-                  e.currentTarget.style.color = "var(--text-primary)";
-                }
-              }}
-              onMouseLeave={e => {
-                if (selected !== amt) {
-                  e.currentTarget.style.borderColor = "var(--border-bright)";
-                  e.currentTarget.style.color = "var(--text-secondary)";
-                }
-              }}
-            >
-              {amt}zł
-            </button>
-          ))}
-          <input
-            type="number"
-            placeholder="Inna kwota"
-            value={custom}
-            onChange={e => { setCustom(e.target.value); setSelected(0); }}
-            style={{
-              background: "transparent",
-              border: "1px solid var(--border-bright)",
-              padding: "14px",
-              fontFamily: "'Barlow Condensed', sans-serif",
-              fontWeight: 600,
-              fontSize: "16px",
-              color: "var(--text-primary)",
-              outline: "none",
-              textAlign: "center",
-            }}
-          />
-        </div>
-
-        <div style={{ marginBottom: "20px" }}>
-          <div style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontSize: "42px",
-            fontWeight: 600,
-            color: "var(--accent)",
-            textAlign: "center",
-            marginBottom: "4px",
-          }}>
-            ${custom || selected}
+    <section id="donate" style={{ padding: "80px 24px", background: "var(--bg)" }}>
+      <style>{`
+        @media (min-width: 900px) {
+          .donate-section { padding: 120px 48px !important; display: grid !important; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        }
+        .amounts-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 8px;
+          margin-bottom: 16px;
+        }
+      `}</style>
+      <div className="donate-section" style={{ display: "flex", flexDirection: "column", gap: "48px" }}>
+        {/* Left content */}
+        <div>
+          <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "20px" }}>
+            <div style={{ width: "40px", height: "1px", background: "var(--accent)" }} />
+            <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "12px", letterSpacing: "0.35em", color: "var(--accent)", textTransform: "uppercase" }}>Sfinansuj przyszłość</span>
           </div>
-          <div style={{
-            fontFamily: "'Barlow', sans-serif",
-            fontSize: "12px",
-            color: "var(--text-muted)",
-            textAlign: "center",
-          }}>jednorazowe wsparcie</div>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(36px, 5vw, 58px)", fontWeight: 300, color: "var(--text-primary)", letterSpacing: "-0.02em", lineHeight: 1.1, marginBottom: "20px" }}>
+            Każda złotówka to głos oddany przed dniem wyborów.
+          </h2>
+          <p style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 300, fontSize: "16px", lineHeight: 1.85, color: "var(--text-secondary)", marginBottom: "32px" }}>
+            92% naszych darowizn pochodzi od osób prywatnych, które przekazują 100 złotych lub mniej. Ta kampania należy do ludzi i jest przez nich finansowana.
+          </p>
+          <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
+            {[
+              { label: "100zł finansuje opłacenie oświetlenia w biurze terenowym przez jeden dzień." },
+              { label: "400zł finansuje przeszkolenie nowego koordynatora ds. wolontariatu." },
+              { label: "2000zł tygodniowo finansuje działania cyfrowe w niezdecydowanym stanie." },
+            ].map((item, i) => (
+              <div key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
+                <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "var(--accent)", marginTop: "7px", flexShrink: 0 }} />
+                <span style={{ fontFamily: "'Barlow', sans-serif", fontSize: "14px", color: "var(--text-secondary)", lineHeight: 1.6 }}>{item.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <button style={{
-          width: "100%",
-          background: "var(--accent)",
-          border: "none",
-          padding: "18px",
-          fontFamily: "'Barlow Condensed', sans-serif",
-          fontWeight: 600,
-          fontSize: "14px",
-          letterSpacing: "0.2em",
-          textTransform: "uppercase",
-          color: "var(--bg)",
-          cursor: "pointer",
-          transition: "all 0.2s",
-          marginBottom: "16px",
-        }}
-        onMouseEnter={e => { e.currentTarget.style.background = "var(--accent-hover)"; }}
-        onMouseLeave={e => { e.currentTarget.style.background = "var(--accent)"; }}
-        >
-          WSPOMÓŻ TERAZ →
-        </button>
-
+        {/* Right: donation widget */}
+        <div style={{ background: "var(--surface)", border: "1px solid var(--border-bright)", padding: "32px 24px" }}>
+          <h3 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, fontSize: "14px", letterSpacing: "0.2em", color: "var(--text-muted)", textTransform: "uppercase", marginBottom: "24px" }}>Wybierz ilość</h3>
+          <div className="amounts-grid">
+            {amounts.map(amt => (
+              <button
+                key={amt}
+                onClick={() => { setSelected(amt); setCustom(""); }}
+                style={{
+                  background: selected === amt ? "var(--accent)" : "transparent",
+                  border: `1px solid ${selected === amt ? "var(--accent)" : "var(--border-bright)"}`,
+                  padding: "14px 8px",
+                  fontFamily: "'Barlow Condensed', sans-serif",
+                  fontWeight: 600,
+                  fontSize: "15px",
+                  color: selected === amt ? "var(--bg)" : "var(--text-secondary)",
+                  cursor: "pointer",
+                  transition: "all 0.2s",
+                }}
+              >
+                {amt}zł
+              </button>
+            ))}
+            <input
+              type="number"
+              placeholder="Inna kwota"
+              value={custom}
+              onChange={e => { setCustom(e.target.value); setSelected(0); }}
+              style={{ background: "transparent", border: "1px solid var(--border-bright)", padding: "14px 8px", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, fontSize: "15px", color: "var(--text-primary)", outline: "none", textAlign: "center" }}
+            />
+          </div>
+          <div style={{ marginBottom: "20px" }}>
+            <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "42px", fontWeight: 600, color: "var(--accent)", textAlign: "center", marginBottom: "4px" }}>
+              {custom || selected}zł
+            </div>
+            <div style={{ fontFamily: "'Barlow', sans-serif", fontSize: "12px", color: "var(--text-muted)", textAlign: "center" }}>jednorazowe wsparcie</div>
+          </div>
+          <button style={{
+            width: "100%",
+            background: "var(--accent)",
+            border: "none",
+            padding: "18px",
+            fontFamily: "'Barlow Condensed', sans-serif",
+            fontWeight: 600,
+            fontSize: "14px",
+            letterSpacing: "0.2em",
+            textTransform: "uppercase",
+            color: "var(--bg)",
+            cursor: "pointer",
+            transition: "all 0.2s",
+          }}
+          onMouseEnter={e => { e.currentTarget.style.background = "var(--accent-hover)"; }}
+          onMouseLeave={e => { e.currentTarget.style.background = "var(--accent)"; }}
+          >
+            WSPOMÓŻ TERAZ →
+          </button>
+        </div>
       </div>
     </section>
   );

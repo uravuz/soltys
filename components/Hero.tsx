@@ -19,11 +19,25 @@ export default function Hero() {
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-end",
-        padding: "0 48px 80px",
+        padding: "0 24px 60px",
         position: "relative",
         overflow: "hidden",
       }}
     >
+      <style>{`
+        @media (min-width: 768px) {
+          .hero-section { padding: 0 48px 80px !important; }
+          .hero-image { height: 75vh !important; display: block !important; }
+          .hero-year { display: flex !important; }
+          .hero-tagline { max-width: 480px !important; }
+        }
+        @media (max-width: 767px) {
+          .hero-image { height: 45vh !important; opacity: 0.35 !important; }
+          .hero-cta-row { flex-direction: column !important; }
+          .hero-cta-row a { text-align: center !important; width: 100% !important; box-sizing: border-box !important; }
+        }
+      `}</style>
+
       {/* Background gradient mesh */}
       <div style={{
         position: "absolute",
@@ -51,6 +65,7 @@ export default function Hero() {
 
       {/* Candidate image */}
       <div
+        className="hero-image"
         style={{
           position: "absolute",
           right: "0",
@@ -62,7 +77,7 @@ export default function Hero() {
           opacity: 0,
           animation: "fadeIn 1.2s ease 0.8s forwards",
           pointerEvents: "none",
-            filter: "drop-shadow(0 20px 60px rgba(255, 255, 255, 0.45))",
+          filter: "drop-shadow(0 20px 60px rgba(255, 255, 255, 0.45))",
         }}
       >
         <img
@@ -72,27 +87,27 @@ export default function Hero() {
             height: "100%",
             width: "auto",
             objectFit: "contain",
-            maskImage:
-              "linear-gradient(to top, transparent 0%, black 12%, black 100%)",
-            WebkitMaskImage:
-              "linear-gradient(to top, transparent 0%, black 12%, black 100%)",
+            maskImage: "linear-gradient(to top, transparent 0%, black 12%, black 100%)",
+            WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 12%, black 100%)",
           }}
         />
       </div>
 
-      {/* Year badge top right */}
-      <div style={{
-        position: "absolute",
-        top: "120px",
-        right: "48px",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "flex-end",
-        gap: "6px",
-        zIndex: 2,
-        opacity: 0,
-        animation: "fadeIn 1s ease 1.2s forwards",
-      }}>
+      {/* Year badge top right — hidden on mobile */}
+      <div
+        className="hero-year"
+        style={{
+          position: "absolute",
+          top: "120px",
+          right: "48px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-end",
+          gap: "6px",
+          zIndex: 2,
+          opacity: 0,
+          animation: "fadeIn 1s ease 1.2s forwards",
+        }}>
         <span style={{
           fontFamily: "'Barlow Condensed', sans-serif",
           fontSize: "11px",
@@ -116,7 +131,7 @@ export default function Hero() {
           display: "flex",
           alignItems: "center",
           gap: "16px",
-          marginBottom: "32px",
+          marginBottom: "24px",
           opacity: 0,
           animation: "fadeUp 0.8s ease 0.2s forwards",
         }}>
@@ -134,12 +149,12 @@ export default function Hero() {
         {/* Headline */}
         <h1 style={{
           fontFamily: "'Cormorant Garamond', serif",
-          fontSize: "clamp(64px, 9vw, 120px)",
+          fontSize: "clamp(56px, 12vw, 120px)",
           fontWeight: 300,
           lineHeight: 0.9,
           color: "var(--text-primary)",
           letterSpacing: "-0.02em",
-          marginBottom: "12px",
+          marginBottom: "8px",
           opacity: 0,
           animation: "fadeUp 0.9s ease 0.35s forwards",
         }}>
@@ -147,13 +162,13 @@ export default function Hero() {
         </h1>
         <h1 style={{
           fontFamily: "'Cormorant Garamond', serif",
-          fontSize: "clamp(64px, 9vw, 120px)",
+          fontSize: "clamp(56px, 12vw, 120px)",
           fontWeight: 700,
           fontStyle: "italic",
           lineHeight: 0.9,
           color: "var(--text-primary)",
           letterSpacing: "-0.02em",
-          marginBottom: "48px",
+          marginBottom: "32px",
           opacity: 0,
           animation: "fadeUp 0.9s ease 0.45s forwards",
         }}>
@@ -161,29 +176,32 @@ export default function Hero() {
         </h1>
 
         {/* Tagline */}
-        <p style={{
-          fontFamily: "'Barlow', sans-serif",
-          fontWeight: 300,
-          fontSize: "18px",
-          lineHeight: 1.7,
-          color: "var(--text-secondary)",
-          maxWidth: "480px",
-          marginBottom: "56px",
-          opacity: 0,
-          animation: "fadeUp 0.9s ease 0.6s forwards",
-        }}>
+        <p
+          className="hero-tagline"
+          style={{
+            fontFamily: "'Barlow', sans-serif",
+            fontWeight: 300,
+            fontSize: "clamp(15px, 3vw, 18px)",
+            lineHeight: 1.7,
+            color: "var(--text-secondary)",
+            marginBottom: "40px",
+            opacity: 0,
+            animation: "fadeUp 0.9s ease 0.6s forwards",
+          }}>
           Nowoczesne rolnictwo, godne życie na wsi i pewna przyszłość dla młodych
         </p>
 
         {/* CTA row */}
-        <div style={{
-          display: "flex",
-          gap: "16px",
-          alignItems: "center",
-          flexWrap: "wrap",
-          opacity: 0,
-          animation: "fadeUp 0.9s ease 0.75s forwards",
-        }}>
+        <div
+          className="hero-cta-row"
+          style={{
+            display: "flex",
+            gap: "12px",
+            alignItems: "center",
+            flexWrap: "wrap",
+            opacity: 0,
+            animation: "fadeUp 0.9s ease 0.75s forwards",
+          }}>
           <a href="#vision" style={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontWeight: 600,
@@ -192,19 +210,13 @@ export default function Hero() {
             textTransform: "uppercase",
             color: "var(--bg)",
             background: "var(--accent)",
-            padding: "16px 36px",
+            padding: "16px 32px",
             textDecoration: "none",
             display: "inline-block",
             transition: "all 0.2s",
           }}
-          onMouseEnter={e => {
-            e.currentTarget.style.background = "var(--accent-hover)";
-            e.currentTarget.style.transform = "translateY(-2px)";
-          }}
-          onMouseLeave={e => {
-            e.currentTarget.style.background = "var(--accent)";
-            e.currentTarget.style.transform = "translateY(0)";
-          }}>
+          onMouseEnter={e => { e.currentTarget.style.background = "var(--accent-hover)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+          onMouseLeave={e => { e.currentTarget.style.background = "var(--accent)"; e.currentTarget.style.transform = "translateY(0)"; }}>
             Obietnice Wyborcze
           </a>
           <a href="#join-us" style={{
@@ -215,19 +227,13 @@ export default function Hero() {
             textTransform: "uppercase",
             color: "var(--text-primary)",
             border: "1px solid var(--border-bright)",
-            padding: "15px 36px",
+            padding: "15px 32px",
             textDecoration: "none",
             display: "inline-block",
             transition: "all 0.2s",
           }}
-          onMouseEnter={e => {
-            e.currentTarget.style.borderColor = "rgba(255,255,255,0.35)";
-            e.currentTarget.style.transform = "translateY(-2px)";
-          }}
-          onMouseLeave={e => {
-            e.currentTarget.style.borderColor = "var(--border-bright)";
-            e.currentTarget.style.transform = "translateY(0)";
-          }}>
+          onMouseEnter={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.35)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+          onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border-bright)"; e.currentTarget.style.transform = "translateY(0)"; }}>
             Zaangażuj się
           </a>
         </div>
@@ -237,15 +243,14 @@ export default function Hero() {
       <div style={{
         position: "absolute",
         bottom: 0,
-        left: "48px",
-        right: "48px",
+        left: "24px",
+        right: "24px",
         height: "1px",
         background: "linear-gradient(90deg, var(--accent), transparent)",
         zIndex: 2,
         transformOrigin: "left",
         transform: "scaleX(0)",
         transition: "transform 1.2s cubic-bezier(0.76, 0, 0.24, 1) 0.8s",
-        ref: lineRef,
       } as React.CSSProperties}
         ref={lineRef}
       />
@@ -254,7 +259,7 @@ export default function Hero() {
       <div style={{
         position: "absolute",
         bottom: "40px",
-        right: "48px",
+        right: "24px",
         display: "flex",
         alignItems: "center",
         gap: "12px",
