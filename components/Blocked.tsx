@@ -28,11 +28,24 @@ export default function Blocked() {
                 textAlign: "center"
             }}>Możliwość wyświetlania strony została ograniczona za decyzją wychowawcy klasy 3TM</h1>
 
-            <div style={{
-                width: "fit-content",
-                transform: "translateX(-50%)",
-                position: "relative",
-                left: "50%"
+            <style>{`
+                @media (max-width: 393px) {
+                    .blocked-btn-wrapper {
+                        flex-direction: column !important;
+                        align-items: stretch !important;
+                    }
+                    .blocked-btn-wrapper a {
+                        justify-content: center;
+                    }
+                }
+            `}</style>
+
+            <div className="blocked-btn-wrapper" style={{
+                display: "flex",
+                flexDirection: "row",
+                flexWrap: "wrap",
+                justifyContent: "center",
+                gap: "12px",
             }}>
 
                 <a href="https://instagram.com/soltys.zsp1/" target="_blank" style={{
@@ -49,7 +62,6 @@ export default function Blocked() {
                     alignItems: "center",
                     gap: "10px",
                     transition: "all 0.2s",
-                    marginRight: "12px"
                 }}
                 onMouseEnter={e => { e.currentTarget.style.background = "var(--accent-hover)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
                 onMouseLeave={e => { e.currentTarget.style.background = "var(--accent)"; e.currentTarget.style.transform = "translateY(0)"; }}>
