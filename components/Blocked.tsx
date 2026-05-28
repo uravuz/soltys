@@ -26,7 +26,7 @@ export default function Blocked() {
                 display: "block",
                 marginBottom: "24px",
                 textAlign: "center"
-            }}>Strona została zablokowana przez wychowawcę klasy 3TM</h1>
+            }}>Możliwość wyświetlania strony została ograniczona za decyzją wychowawcy klasy 3TM</h1>
 
             <div style={{
                 width: "fit-content",
