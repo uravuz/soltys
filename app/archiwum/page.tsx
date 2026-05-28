@@ -8,13 +8,10 @@ import JoinUs from "@/components/JoinUs";
 import Donate from "@/components/Donate";
 import Footer from "@/components/Footer";
 
-import Blocked from "@/components/Blocked";
-
 export default function Home() {
   return (
     <main>
-      <Blocked />
-      {/* <Navbar />
+      <Navbar />
       <Hero />
       <StatsBar />
       <Vision />
@@ -22,7 +19,7 @@ export default function Home() {
       <Endorsements />
       <JoinUs />
       <Donate />
-      <Footer /> */}
+      <Footer />
     </main>
   );
 }
