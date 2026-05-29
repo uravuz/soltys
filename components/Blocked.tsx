@@ -26,9 +26,13 @@ export default function Blocked() {
                 display: "block",
                 marginBottom: "4px",
                 textAlign: "center"
-            }}>Możliwość wyświetlania stony została zablokowana</h1>
+            }}>Oświadczenie</h1>
 
-
+<p style={{
+display: "block",
+marginBottom: "2px",
+textAlign: "center"
+}}>Przepraszam wychowawcę klasy 3TM oraz opiekuna Samorządu Uczniowskiego za umieszczenie nieprawdziwych informacji w poprzednim oświadczeniu związanym z kandydaturą Bartosza Wojtkowiaka w wyborach do Samorządu Uczniowskiego.</p>
             <style>{`
                 @media (max-width: 393px) {
                     .blocked-btn-wrapper {
