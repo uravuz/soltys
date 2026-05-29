@@ -24,9 +24,18 @@ export default function Blocked() {
         }}>
             <h1 style={{
                 display: "block",
-                marginBottom: "24px",
+                marginBottom: "12px",
                 textAlign: "center"
-            }}>Możliwość wyświetlania strony została ograniczona za decyzją wychowawcy klasy 3TM</h1>
+            }}>Oświadczenie</h1>
+
+<p style={{
+display: "block",
+marginBottom: "24px",
+textAlign: "center"
+}}>Z przykrością oświadczamy, że zażaleniem wychowawcy klasy 3TM zgłoszonym do opiekuna Samorządu Uczniowskiego, niezależny kandydat Bartosz Wojtkowiak został usunięty z list wyborczych.
+Jesteśmy oburzeni tą decyzją. Informacje o tym fakcie otrzymaliśmy dopiero w ostatni dzień szkolny przed wyborami do samorządu uczniowskiego.
+Decyzja jest dla nas niezwykle niezrozumiała, ponieważ wszystkie materiały wyborcze, przez które Bartosz został usunięty z listwy, zostały zatwierdzone przez opiekuna Samorządu Uczniowskiego.
+Dziękujemy wychowawcy klasy 3TM, że drugi rok z rzędu pozbawia swojej klasie możliwości kandydowania do samorządu uczniowskiego.</p>
 
             <style>{`
                 @media (max-width: 393px) {
