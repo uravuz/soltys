@@ -26,28 +26,8 @@ export default function Blocked() {
                 display: "block",
                 marginBottom: "4px",
                 textAlign: "center"
-            }}>Oświadczenie</h1>
+            }}>Możliwość wyświetlania stony została zablokowana</h1>
 
-<p style={{
-display: "block",
-marginBottom: "4px",
-textAlign: "center"
-}}>Z przykrością oświadczamy, że zażaleniem jednego z konkurujących kandydatów zgłoszonym do opiekuna Samorządu Uczniowskiego, niezależny kandydat Bartosz Wojtkowiak został usunięty z list wyborczych.</p>
-<p style={{
-display: "block",
-marginBottom: "4px",
-textAlign: "center"
-}}>Jesteśmy oburzeni tą decyzją. Informacje o tym fakcie otrzymaliśmy dopiero w ostatni dzień szkolny przed wyborami do samorządu uczniowskiego.</p>
-<p style={{
-display: "block",
-marginBottom: "4px",
-textAlign: "center"
-}}>Decyzja jest dla nas niezwykle niezrozumiała, ponieważ wszystkie materiały wyborcze, przez które Bartosz został usunięty z listy wyborczej, zostały wcześniej zatwierdzone przez opiekuna Samorządu Uczniowskiego.</p>
-<p style={{
-display: "block",
-marginBottom: "24px",
-textAlign: "center"
-}}>Dziękujemy wszystkim wspierającym kampanię wyborczą oraz wszystkim potencjalnym woborcom. Mimo takiego obrotu spraw, nie poddajemy się i będziemy dalej walczyć o wolność słowa oraz o  niezależność kandydatów do Samorządu Uczniowskiego.</p>
 
             <style>{`
                 @media (max-width: 393px) {
