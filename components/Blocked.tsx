@@ -32,7 +32,7 @@ export default function Blocked() {
 display: "block",
 marginBottom: "4px",
 textAlign: "center"
-}}>Z przykrością oświadczamy, że zażaleniem wychowawcy klasy 3TM zgłoszonym do opiekuna Samorządu Uczniowskiego, niezależny kandydat Bartosz Wojtkowiak został usunięty z list wyborczych.</p>
+}}>Z przykrością oświadczamy, że zażaleniem jednego z konkurujących kandydatów zgłoszonym do opiekuna Samorządu Uczniowskiego, niezależny kandydat Bartosz Wojtkowiak został usunięty z list wyborczych.</p>
 <p style={{
 display: "block",
 marginBottom: "4px",
@@ -47,7 +47,7 @@ textAlign: "center"
 display: "block",
 marginBottom: "24px",
 textAlign: "center"
-}}>Dziękujemy wychowawcy klasy 3TM, że drugi rok z rzędu pozbawia swojej klasie możliwości kandydowania do samorządu uczniowskiego.</p>
+}}>Dziękujemy wszystkim wspierającym kampanię wyborczą oraz wszystkim potencjalnym woborcom. Mimo takiego obrotu spraw, nie poddajemy się i będziemy dalej walczyć o wolność słowa oraz o  niezależność kandydatów do Samorządu Uczniowskiego.</p>
 
             <style>{`
                 @media (max-width: 393px) {
